@@ -1,12 +1,13 @@
 
-import ProductList from "@/components/ProductList";
+import Navbar from "@/components/Navbar";
+import Banner from "@/components/Banner";
 export default function Home() {
   return (
     
            <>
            
-
-           <ProductList/>
+<Navbar/>
+<Banner/>
            </>
      
   );

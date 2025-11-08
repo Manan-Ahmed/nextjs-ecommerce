@@ -10,10 +10,12 @@ export default function ProductList() {
   return (
     <>
    
+
+   <div className="mt-24">
       <h2 className="text-center text-2xl">Product List</h2>
 
 
-      <div className="m-2 text-center">
+      <div className="m-2 text-center mt-6">
 
         <button className="px-4 py-2 rounded border cursor-pointer" onClick={()=>{setSelectedCategory("all")}}> All </button>
         {categories.map((data,i)=>(
@@ -23,7 +25,7 @@ export default function ProductList() {
         ))}
       </div>
 
- <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-6 gap-6">
+ <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-6 gap-6 m-6">
       {
         products.map((data,i)=>(
           <div
@@ -46,13 +48,13 @@ export default function ProductList() {
           {data.description}
         </p>
         <div className="flex justify-between items-center">
-          <span className="text-blue-600 font-semibold text-lg">
+          <span className="text-red-800 font-semibold text-lg">
             ${data.price}
           </span>
-          <button className="px-3 py-1 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition">
+          <button className="px-3 py-1 bg-red-800 text-white text-sm rounded-lg hover:bg-red-800 transition">
             View
           </button>
-            <button onClick={()=> addToCart(data)} className="px-3 py-1 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition">
+            <button onClick={()=> addToCart(data)} className="px-3 py-1 bg-red-800 text-white text-sm rounded-lg hover:bg-red-800 transition">
             addtocart
           </button>
         </div>
@@ -98,6 +100,7 @@ export default function ProductList() {
       <button onClick={handleNext} className="px-3 py-2 rounded-md border bg-blue-600 text-white">Next</button>
 </div>
      </div>
+</div>
     </>
   );
 }
