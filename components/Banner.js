@@ -24,7 +24,7 @@ export default function Banner(){
               Get Started
             </button>
 
-            <button className="px-6 py-3 border border-red-800 cursor-pointer  text-red-800 text-lg rounded-lg hover:bg-red-90 transition">
+            <button className="px-6 py-3 border border-red-800 cursor-pointer  text-red-800 text-lg rounded-lg  transition">
               Learn More
             </button>
           </div>

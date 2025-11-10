@@ -1,11 +1,12 @@
 "use client";
 import { useProductContext } from "@/context/ProductContext"; 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductList() {
   const { products, handleNext, handlePrev, totalPages, handlePageClick,currentPage,addToCart, categories,selecetedCategory, setSelectedCategory, setCategories, } = useProductContext();
 
-  console.log('products',products)
+  console.log('categories',categories)
 
   return (
     <>
@@ -30,15 +31,18 @@ export default function ProductList() {
         products.map((data,i)=>(
           <div
       key={data.id + i}
-      className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
+      className="bg-white cursor-pointer dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
     >
+      <Link href={`/products/${data.id}`}>
       <Image
         src={data.thumbnail}
         alt={data.title}
         width={400}
         height={300}
         className="object-cover w-full h-64"
-      />
+      /> 
+      </Link>
+     
 
       <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
